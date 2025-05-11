@@ -7,8 +7,8 @@ import ssl
 from dotenv import load_dotenv
 
 load_dotenv()
-
-HOST = os.getenv("HOST")
+# HOST = os.getenv("HOST")
+HOST = "127.0.0.1"
 PORT = 5555
 BUFFER_SIZE = 1024
 color = 'black'

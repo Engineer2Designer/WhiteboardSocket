@@ -3,15 +3,16 @@ import socket
 import threading
 import ssl
 from dotenv import load_dotenv
-
 load_dotenv()
 
-HOST = os.getenv("HOST")
+# HOST = os.getenv("HOST")
+HOST = "127.0.0.1"
 PORT = 5555
 BUFFER_SIZE = 1024
-CERTFILE_PATH = os.getenv('CERTFILE_PATH')
-KEYFILE_PATH = os.getenv('KEYFILE_PATH')
-
+# CERTFILE_PATH = os.getenv('CERTFILE_PATH')
+# KEYFILE_PATH = os.getenv('KEYFILE_PATH')
+CERTFILE_PATH = "certificate.pem"
+KEYFILE_PATH = "key.pem"
 clients = {}
 
 def handle_client(client_socket, address):
